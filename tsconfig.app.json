@@ -6,7 +6,10 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": ["./src/*"],
+      "@requests/*": ["./src/requests/*"]
+    },
+    "types": ["bun-types"],
+    "composite": true
+  },
 }
