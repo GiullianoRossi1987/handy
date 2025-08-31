@@ -1,9 +1,8 @@
-import type { WorkerResponseBody } from '@requests/interfaces/IWorkers'
-import type { UpdateUserRequest } from './interfaces/IUsers'
+import type { UpdateUserRequest, CustomerWorkerResponse } from './interfaces/IUsers'
 import { Requester } from './Requester'
 
 export class WorkerRequests extends Requester {
-  public async GetByUUID(uuid: string): Promise<WorkerResponseBody | null> {
+  public async GetByUUID(uuid: string): Promise<CustomerWorkerResponse | null> {
     this.checkDefinedUrl()
     const response = await fetch(`${this.HandyUrl}/worker/${uuid}`, {
       method: 'GET',
@@ -14,7 +13,10 @@ export class WorkerRequests extends Requester {
     return await response.json()
   }
 
-  public async AddWorker(user_id: number, payload: UpdateUserRequest): Promise<WorkerResponseBody> {
+  public async AddWorker(
+    user_id: number,
+    payload: UpdateUserRequest,
+  ): Promise<CustomerWorkerResponse> {
     this.checkDefinedUrl()
     const response = await fetch(`${this.HandyUrl}/worker/add/${user_id}`, {
       method: 'PUT',

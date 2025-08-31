@@ -12,8 +12,12 @@ export interface LoginResponse {
   attempted_at: string
 }
 
-export interface CreateUserRequest extends LoginRequestBody {
-  as: boolean
+export interface UserResponse {
+  id: number
+  login: string
+  password: string
+  created_at: string
+  updated_at: string
 }
 
 export interface LoginDataResponse {
@@ -23,14 +27,24 @@ export interface LoginDataResponse {
   updated_at: string
 }
 
-export interface CreateUserRequest extends LoginRequestBody {
-  as: boolean
-}
-
 export interface UpdateUserRequest {
   name: string
   active: boolean
   phones: Phone[]
   emails: Email[]
   addresses: Address[]
+}
+
+export interface CreateUserRequest extends LoginRequestBody {
+  as: boolean
+}
+
+export interface CreateUserRequest extends LoginRequestBody {
+  as: boolean
+}
+
+export interface CustomerWorkerResponse extends UpdateUserRequest {
+  id: number
+  user_id: number
+  rating: number
 }

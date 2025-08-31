@@ -1,11 +1,10 @@
-import type { WorkerResponseBody } from '@requests/interfaces/IWorkers'
-import type { UpdateUserRequest } from './interfaces/IUsers'
+import type { UpdateUserRequest, CustomerWorkerResponse } from './interfaces/IUsers'
 import { Requester } from './Requester'
 
-export class WorkerRequests extends Requester {
-  public async GetByUUID(uuid: string): Promise<WorkerResponseBody | null> {
+export class CustomerRequests extends Requester {
+  public async GetByUUID(uuid: string): Promise<CustomerWorkerResponse | null> {
     this.checkDefinedUrl()
-    const response = await fetch(`${this.HandyUrl}/worker/${uuid}`, {
+    const response = await fetch(`${this.HandyUrl}/customer/${uuid}`, {
       method: 'GET',
     })
     if (response.status === 404) {
@@ -14,25 +13,28 @@ export class WorkerRequests extends Requester {
     return await response.json()
   }
 
-  public async AddWorker(user_id: number, payload: UpdateUserRequest): Promise<WorkerResponseBody> {
+  public async AddCustomer(
+    user_id: number,
+    payload: UpdateUserRequest,
+  ): Promise<CustomerWorkerResponse> {
     this.checkDefinedUrl()
-    const response = await fetch(`${this.HandyUrl}/worker/add/${user_id}`, {
+    const response = await fetch(`${this.HandyUrl}/customer/add/${user_id}`, {
       method: 'PUT',
       body: JSON.stringify(payload),
     })
     return await response.json()
   }
 
-  public async UpdateWorker(uuid: string, payload: UpdateUserRequest): Promise<void> {
+  public async UpdateCustomer(uuid: string, payload: UpdateUserRequest): Promise<void> {
     this.checkDefinedUrl()
-    await fetch(`${this.HandyUrl}/worker/update/${uuid}`, {
+    await fetch(`${this.HandyUrl}/customer/update/${uuid}`, {
       method: 'PUT',
       body: JSON.stringify(payload),
     })
   }
 
-  public async DeleteWorker(uuid: string): Promise<void> {
+  public async DeleteCustomer(uuid: string): Promise<void> {
     this.checkDefinedUrl()
-    await fetch(`${this.HandyUrl}/worker/delete/${uuid}`, { method: 'DELETE' })
+    await fetch(`${this.HandyUrl}/customer/delete/${uuid}`, { method: 'DELETE' })
   }
 }
