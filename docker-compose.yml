@@ -1,0 +1,13 @@
+services:
+  app:
+    image: oven/bun:latest
+    working_dir: /app
+    network_mode: host
+    hostname: localhost
+    command: 'bun dev'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    expose: [3000]
