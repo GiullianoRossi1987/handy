@@ -11,5 +11,5 @@
     },
     "types": ["bun-types"],
     "composite": true
-  },
+  }
 }
