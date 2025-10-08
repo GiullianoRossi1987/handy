@@ -5,3 +5,4 @@ WORKDIR /app
 
 RUN ["bun", "install"]
 COPY . .
+RUN ["bun", "test"]

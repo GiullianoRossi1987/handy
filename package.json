@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --port 3000 --host 0.0.0.0",
     "docker": "bunx --bun vite --port 3000",
-    "test": "bunx --bun jest",
+    "test": "bunx test",
     "preview": "vite preview",
     "build": "bunx --bun vite build --outDir dist",
     "type-check": "vue-tsc --build",

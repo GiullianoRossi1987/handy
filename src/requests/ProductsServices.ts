@@ -1,5 +1,5 @@
-import { Requester } from './Requester';
-import type { ProductService } from './interfaces/IProductsServices';
+import { Requester } from '@requests/Requester';
+import type { ProductService } from '@requests/interfaces/IProductsServices';
 
 export class ProductServiceRequester extends Requester {
   private ProductService: ProductService | null = null;
