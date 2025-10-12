@@ -2,6 +2,8 @@ import type { Config } from 'jest';
 
 const config: Config = {
   preset: 'ts-jest',
+  rootDir: '.',
+  setupFiles: ['<rootDir>/tests/mock.env.ts'],
   testMatch: ['**/*.spec.ts', '**/*.test.ts'],
   testEnvironment: 'node',
   moduleDirectories: ['src', 'node_modules'],

@@ -6,5 +6,6 @@ describe('Should make the basic requester functions work', () => {
     expect(parent.getUrl()).toStrictEqual(baseUrl);
     const child = new Requester({ parent });
     expect(child.getUrl()).toStrictEqual(baseUrl);
+    expect(process.env.TESTING_ENV).toStrictEqual('cyka');
   });
 });
