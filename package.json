@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --port 3000 --host 0.0.0.0",
     "docker": "bunx --bun vite --port 3000",
-    "test": "bunx test",
+    "test": "bun run jest --config jest.config.ts",
     "preview": "vite preview",
     "build": "bunx --bun vite build --outDir dist",
     "type-check": "vue-tsc --build",
@@ -17,6 +17,9 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
     "vue": "^3.5.18"
   },
   "devDependencies": {
