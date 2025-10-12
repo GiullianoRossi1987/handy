@@ -2,15 +2,18 @@ import type { Config } from 'jest';
 
 const config: Config = {
   preset: 'ts-jest',
-  testMatch: ['**.spec.ts', '**test.ts'],
+  testMatch: ['**/*.spec.ts', '**/*.test.ts'],
   testEnvironment: 'node',
-  moduleDirectories: ['src', 'node_modules', '.', 'src/requests'],
+  moduleDirectories: ['src', 'node_modules'],
   moduleNameMapper: {
-    '/^@/(.*)$/': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^@requests/(.*)$': '<rootDir>/src/requests/$1',
   },
-  modulePaths: ['<rootDir>'],
-  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  roots: ['<rootDir>'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: 'tsconfig.app.json', useESM: true }],
+  },
 };
 
 export default config;
