@@ -14,4 +14,4 @@ export class UserMocker extends Requester {
     });
     return await response.json();
   }
-}
+} // TODO: implement it in the tests
