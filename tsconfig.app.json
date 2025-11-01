@@ -11,6 +11,7 @@
       "@requests/*": ["./src/requests/*"],
       "@utils/*": ["./src/utils/*"],
       "@mocks/*": ["./src/mocks/*"],
+      "@views/*": ["./src/views/*"],
       "@tests/*": ["./tests/*"]
     },
     "types": ["bun-types", "jest"],

@@ -8,8 +8,8 @@ const config: Config = {
   testEnvironment: 'node',
   moduleDirectories: ['src', 'node_modules'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@requests/(.*)$': '<rootDir>/src/requests/$1',
+    '@/(.*)': '<rootDir>/src/$1',
+    '@requests/(.*)': '<rootDir>/src/requests/$1',
   },
   roots: ['<rootDir>'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],

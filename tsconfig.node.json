@@ -12,6 +12,15 @@
     "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
 
+    "paths": {
+      "@/*": ["./src/*"],
+      "@requests/*": ["./src/requests/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@mocks/*": ["./src/mocks/*"],
+      "@views/*": ["./src/views/*"],
+      "@tests/*": ["./tests/*"]
+    },
+
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": ["node", "bun-types"],
