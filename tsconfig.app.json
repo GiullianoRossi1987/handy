@@ -12,6 +12,7 @@
       "@utils/*": ["./src/utils/*"],
       "@mocks/*": ["./src/mocks/*"],
       "@views/*": ["./src/views/*"],
+      "@components/*": ["./src/components"],
       "@tests/*": ["./tests/*"]
     },
     "types": ["bun-types", "jest"],

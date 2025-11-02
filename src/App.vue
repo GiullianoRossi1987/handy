@@ -4,7 +4,6 @@
     <header class="header">
       <nav class="nav">
         <div class="nav-brand">
-          <img src="../assets/logo.png" alt="Logo" class="logo" />
           <span class="brand-name">Handy</span>
         </div>
 
@@ -104,13 +103,13 @@
     <section class="cta">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Ready to Simplify Your Tax Declaration?</h2>
+          <h2 class="cta-title">Procurando trabalhadores?</h2>
           <p class="cta-subtitle">
-            Join thousands of informal workers who are already using our platform to stay compliant
-            with the Federal Revenue Office.
+            Você também pode entrar como um cliente e encontrar prestadores de serviço para suprir
+            suas necessidades
           </p>
           <button class="btn btn-primary btn-large" @click="handleGetStarted">
-            Get Started Free
+            Crie uma conta
           </button>
         </div>
       </div>
@@ -122,7 +121,6 @@
         <div class="footer-content">
           <div class="footer-section">
             <div class="footer-brand">
-              <img src="../assets/logo.png" alt="Logo" class="logo" />
               <span class="brand-name">Handy</span>
             </div>
             <p class="footer-description">A ferramenta do trabalhador informal brasileiro</p>
@@ -168,44 +166,46 @@ export default {
         {
           id: 1,
           icon: 'fas fa-shield-alt',
-          title: 'Secure & Compliant',
-          description: 'Bank-level security with full compliance to RFB standards',
+          title: 'Mais clientes',
+          description:
+            'Com o Handy fica muito mais fácil de seus clientes entrarem em contato com seus serviços',
           color: '#4f46e5',
         },
         {
           id: 2,
           icon: 'fas fa-bolt',
-          title: 'Fast Processing',
-          description: 'Submit your declarations in minutes, not hours',
+          title: 'Rápido',
+          description: 'Agende vendas e prestações de serviços em um instante',
           color: '#10b981',
         },
         {
           id: 3,
           icon: 'fas fa-mobile-alt',
-          title: 'Mobile Friendly',
-          description: 'Access your dashboard from any device, anywhere',
+          title: 'Alternativas Mobile',
+          description: 'Tenha acesso a seus clientes e seus comprovantes onde quer que esteja',
           color: '#f59e0b',
         },
         {
           id: 4,
           icon: 'fas fa-headset',
-          title: '24/7 Support',
-          description: 'Get help whenever you need it from our expert team',
+          title: 'Conformidade',
+          description:
+            'Seus comprovantes de serviço são automaticamente enviados para um canal da Receita Federal',
           color: '#ef4444',
         },
       ],
       steps: [
         {
-          title: 'Create Your Account',
-          description: 'Sign up in 30 seconds with your basic information',
+          title: 'Crie uma conta',
+          description: 'Rápido e prático',
         },
         {
-          title: 'Add Your Services',
-          description: 'Input your service details and earnings information',
+          title: 'Inclua seus serviços',
+          description: 'Liste seus produtos e serviços disponíveis',
         },
         {
-          title: 'Submit to RFB',
-          description: 'We automatically generate and submit your declaration',
+          title: 'Envio rápido para a Receita',
+          description: 'Envio direto para a Receita Federal',
         },
       ],
     };
@@ -254,11 +254,6 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.logo {
-  height: 32px;
-  width: auto;
 }
 
 .brand-name {
