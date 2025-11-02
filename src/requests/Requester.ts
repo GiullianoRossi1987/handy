@@ -11,11 +11,11 @@ export class Requester {
   constructor(bd?: RequesterBody) {
     if (!bd) {
       bd = {
-        url: process.env.HandyUrl ?? '',
+        url: process.env.VITE_HANDY_URL ?? '',
       };
     }
     const { url, parent } = bd; // didn't want to do that tbh
-    this.HandyUrl = url ? url : (process.env.HandyUrl ?? '');
+    this.HandyUrl = url ? url : (process.env.VITE_HANDY_URL ?? '');
     if (parent) {
       this.HandyUrl = parent.HandyUrl;
     }

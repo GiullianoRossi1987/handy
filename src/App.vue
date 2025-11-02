@@ -9,11 +9,9 @@
         </div>
 
         <div class="nav-links">
-          <a href="#" class="nav-link active">Home</a>
-          <a href="#" class="nav-link">Features</a>
-          <a href="#" class="nav-link">Pricing</a>
-          <a href="#" class="nav-link">About</a>
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#" class="nav-link active">Handy</a>
+          <a href="#" class="nav-link">Sobre nós</a>
+          <a href="#" class="nav-link">Entre em Contato</a>
         </div>
 
         <div class="nav-actions">
@@ -31,11 +29,9 @@
 
       <!-- Mobile Menu -->
       <div v-if="mobileMenuOpen" class="mobile-menu">
-        <a href="#" class="mobile-nav-link">Home</a>
-        <a href="#" class="mobile-nav-link">Features</a>
-        <a href="#" class="mobile-nav-link">Pricing</a>
-        <a href="#" class="mobile-nav-link">About</a>
-        <a href="#" class="mobile-nav-link">Contact</a>
+        <a href="#" class="mobile-nav-link">Handy</a>
+        <a href="#" class="mobile-nav-link">Sobre nós</a>
+        <a href="#" class="mobile-nav-link">Entre em Contato</a>
         <div class="mobile-actions">
           <button class="btn btn-outline">Já tem uma conta? Entre aqui</button>
           <button class="btn btn-primary">Get Started</button>
@@ -53,33 +49,14 @@
           <span class="text-gradient">de imposto</span>
         </h1>
         <p class="hero-subtitle">
-          An intuitive platform designed to help informal workers in Brazil easily declare their
-          services to the Federal Revenue Office. Save time and stay compliant. Uma plataforma para
-          trabalhadores informais gerenciarem seu trabalho e declararem
+          Uma plataforma para trabalhadores informais gerenciarem seu trabalho e declararem suas
+          atividades fiscais
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary btn-large" @click="handleGetStarted">
-            Start Declaring Now
+            Comece conosco
           </button>
-          <button class="btn btn-secondary btn-large" @click="handleDemo">Watch Demo</button>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-number">10K+</div>
-            <div class="stat-label">Active Users</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Satisfaction Rate</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">R$ 5M+</div>
-            <div class="stat-label">Taxes Declared</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="../assets/hero-dashboard.png" alt="Dashboard Preview" class="hero-image" />
       </div>
     </section>
 
@@ -87,10 +64,9 @@
     <section class="features">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Why Choose Our Platform</h2>
+          <h2 class="section-title">Por que escolher o Handy ?</h2>
           <p class="section-subtitle">
-            Designed specifically for informal workers with features that make tax declaration
-            simple and secure
+            Desenvolvido especificamente para trabalhadores informais e seus clientes
           </p>
         </div>
 
@@ -147,11 +123,9 @@
           <div class="footer-section">
             <div class="footer-brand">
               <img src="../assets/logo.png" alt="Logo" class="logo" />
-              <span class="brand-name">YourBrand</span>
+              <span class="brand-name">Handy</span>
             </div>
-            <p class="footer-description">
-              Making tax declaration accessible for every informal worker in Brazil.
-            </p>
+            <p class="footer-description">A ferramenta do trabalhador informal brasileiro</p>
           </div>
 
           <div class="footer-section">
@@ -248,10 +222,6 @@ export default {
     },
     handleGetStarted() {
       this.$router.push('/signup');
-    },
-    handleDemo() {
-      // Handle demo video playback
-      console.log('Play demo video');
     },
   },
 };

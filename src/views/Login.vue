@@ -51,7 +51,7 @@
       </form>
 
       <div class="login-footer">
-        <p>Não possui uma conta? <a href="#" class="signup-link">Crie uma</a></p>
+        <p>Não possui uma conta? <a href="/signup" class="signup-link">Crie uma</a></p>
       </div>
     </div>
   </div>
@@ -118,6 +118,8 @@ export default {
       await new Promise((resolve: TimerHandler) => setTimeout(resolve, 2000));
       if (!response.success) {
         this.errors.password = 'Invalid password';
+      } else {
+        this.$router.resolve('login');
       }
       this.loading = false;
     },

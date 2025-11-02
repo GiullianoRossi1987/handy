@@ -1,2 +1,2 @@
 process.env.TESTING_ENV = 'cyka';
-process.env.HandyUrl = 'http://localhost:8080';
+process.env.VITE_HANDY_URL = 'http://localhost:8080';
